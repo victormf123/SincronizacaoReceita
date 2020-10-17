@@ -49,6 +49,7 @@ public class ProcessorTests {
 	
 	@Test
 	public void testGerarRelatorioDeProcessamentoContas() {
+		//TODO: Deveria criar um mock para subistituir o endereço
 		Boolean resposta = processor.gerarRelatorioProcessamentoContas("../sincronizacaoreceita/src/test/java/br/com/matheusfreitas/sincronizacaoreceita/processor/CSV.csv");
 		assertTrue(resposta);
 		

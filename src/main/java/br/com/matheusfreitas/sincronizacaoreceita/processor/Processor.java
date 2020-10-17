@@ -34,6 +34,7 @@ public class Processor {
 			 Boolean statusProcessamento = new ReceitaService().atualizarConta(conta.getAgencia(), conta.getConta(), conta.getSaldo(), conta.getStatus());
 			return new String[]{conta.getAgencia(), conta.getConta(), Double.toString(conta.getSaldo()).replace(".", ","), conta.getStatus(), statusProcessamento.toString()};
 		} catch (RuntimeException | InterruptedException e) {
+			//TODO: Deveria criar um exceção personalizada.
 			throw new RuntimeException();
 		}
 	}
@@ -60,6 +61,7 @@ public class Processor {
 	        writer.close();
 	        return true;
 		} catch (IOException e) {
+			//TODO: Deveria criar um exceção personalizada.
 			throw new RuntimeException();
 		}
 	}
